@@ -1,4 +1,4 @@
-﻿/************************************************************/
+﻿regi/************************************************************/
 /*****              SqlDataProvider                     *****/
 /*****                                                  *****/
 /*****                                                  *****/
@@ -19496,7 +19496,7 @@ As
 	ELSE
 		BEGIN
 			-- AssemblyID is not null - Assembly is registered - test for version
-			SET @CurrentVersion  = (SELECT Version 
+			SET @CurrentVersion  = (SELECT Max(Version ) 
 										FROM {databaseOwner}{objectQualifier}Assemblies
 										WHERE AssemblyID = @AssemblyID)
 			
